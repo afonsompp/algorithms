@@ -4,12 +4,8 @@ import java.util.List;
 
 public class InsertionSort {
 	
-	public static List<Integer> sortIncreasingOrder(List<Integer> list) {
-		
-		Integer[] array = new Integer[list.size()];
-		array = list.toArray(array);
-		
-		if (list.size() < 2) {
+	public static int[] sortIncreasingOrder(int[] array) {
+		if (array.length < 2) {
 			throw new IllegalArgumentException("List must be greater than 2");
 		}
 		int key, i;
@@ -22,14 +18,10 @@ public class InsertionSort {
 			}
 			array[i + 1] = key;
 		}
-		return List.of(array);
+		return array;
 	}
-	public static List<Integer> sortNonIncreasingOrder(List<Integer> list) {
-		
-		Integer[] array = new Integer[list.size()];
-		array = list.toArray(array);
-		
-		if (list.size() < 2) {
+	public static int[] sortNonIncreasingOrder(int[] array) {
+		if (array.length < 2) {
 			throw new IllegalArgumentException("List must be greater than 2");
 		}
 		int key, i;
@@ -42,7 +34,7 @@ public class InsertionSort {
 			}
 			array[i + 1] = key;
 		}
-		return List.of(array);
+		return array;
 	}
 	
 }

@@ -10,8 +10,8 @@ public class InsertionSortTest {
 	
 	@Test
 	void insertionSortNonIncreasing() {
-		List<Integer> result = InsertionSort.sortNonIncreasingOrder(List.of(102, 54, 46, 574, 16, 46, 64));
+		int[] result = InsertionSort.sortNonIncreasingOrder(new int[] { 102, 54, 46, 574, 16, 46, 64 });
 		
-		assertEquals(List.of(574, 102, 64, 54, 46, 46, 16), result);
+		assertArrayEquals(new int[] { 574, 102, 64, 54, 46, 46, 16 }, result);
 	}
 }
